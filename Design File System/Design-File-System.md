@@ -5,6 +5,8 @@
 
 Design a file system that allows you to create new paths and associate them with different values.
 
+The format of a path consists of one or more concatenated strings, each starting with a forward slash (/) followed by one or more lowercase English letters. For instance, “/documents” and “/documents/pictures” are valid paths, while an empty string (”“) and a single slash (”/“) are not.
+
 
 
 
