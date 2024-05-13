@@ -38,6 +38,91 @@ fileSystem.get("/c"); // return -1 because this path doesn't exist.
 
 
 
+```
+class FileSystem{
+    Folder root; // trie root
+    
+    public FileSystem() {
+        root = new Folder();
+    }
+    
+    public boolean createPath(String path, int value) {
+        if (pathExists(path)) { 
+            return false;
+        }
+        int lastIndex = path.lastIndexOf("/");
+        boolean result = pathExists(path.substring(0, lastIndex));
+        if (result) {
+            addPath(path, value);
+        }
+        return result;
+    }
+    
+    public int get(String path) {
+        if (!pathExists(path)) {
+            return -1;
+        }
+        Folder folder = root;
+        for (String foldername : path.split("/")) {
+            folder = folder.subfolders.get(foldername);
+        }
+        return folder.value;
+    }
+    
+    private void addPath(String path, int value) {
+        root.addSubfolder(path.split("/"), 0, value);
+    }
+    
+    private boolean pathExists(String path) {
+        if (path.isEmpty()) {
+            return true;
+        }
+        Folder folder = root;
+        for (String folderName : path.split("/")) { 
+            if (folder.subfolders.containsKey(folderName)) {
+                folder = folder.subfolders.get(folderName);
+            } else {
+                return false;
+            }
+        }   
+        return true;
+    }
+}
+
+// Trie Node
+class Folder {
+    public String name;
+    public int value; // applies to to the folder that marks end of a path
+    public HashMap<String, Folder> subfolders = new HashMap<>();
+
+    public Folder() {}
+    public Folder(String name) {
+        this.name = name;
+    }
+    
+    public void addSubfolder(String[] path, int index, int value) {
+        String subfolderToBeCreated = path[index];
+        if (!subfolders.containsKey(subfolderToBeCreated)) {
+            subfolders.put(subfolderToBeCreated, new Folder(subfolderToBeCreated));
+        }
+        if (index < path.length - 1) {
+            Folder subfolder = subfolders.get(subfolderToBeCreated);
+            subfolder.addSubfolder(path, index + 1, value);
+        } 
+        if (index == path.length - 1) {
+            subfolders.get(subfolderToBeCreated).value = value;
+        }
+    }
+
+}
+/**
+ * Your FileSystem object will be instantiated and called as such:
+ * FileSystem obj = new FileSystem();
+ * boolean param_1 = obj.createPath(path,value);
+ * int param_2 = obj.get(path);
+ */
+
+```
 
 
 
