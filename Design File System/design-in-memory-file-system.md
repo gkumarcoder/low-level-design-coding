@@ -1,11 +1,17 @@
 Problem Statement: Design a data structure that simulates an in-memory file system.
 
 FileSystem fileSystem = new FileSystem();
+
 fileSystem.ls("/");                                // return []
+
 fileSystem.mkdir("/a/b/c");
+
 fileSystem.addContentToFile("/a/b/c/d", "hello");
+
 fileSystem.ls("/");                              // return ["a"]
+
 fileSystem.readContentFromFile("/a/b/c/d");      // return "hello"
+
 
 **Approach #1 Using separate Directory and File List** 
 
