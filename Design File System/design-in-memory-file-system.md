@@ -30,6 +30,19 @@ The dirs contains data in the form:
 
  Now, we'll discuss how we implement the various commands required.
 
+```
+public class FileSystem {
+    class Dir {
+        HashMap < String, Dir > dirs = new HashMap < > ();
+        HashMap < String, String > files = new HashMap < > ();
+    }
+    Dir root;
+    public FileSystem() {
+        root = new Dir();
+    }
+```
+ 
+
 **1. ls:** 
 
 In this case, we start off by initializing t, a temporary directory pointer, 
