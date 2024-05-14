@@ -52,7 +52,7 @@ To the root directory. We split the input directory path based on / and obtain t
 Then, we traverse over the tree directory structure based on the individual directories found and we keep on updating the t directory pointer to point to the new level of directory(child) as we go on entering deeper into the directory structure. 
 
 
-At the end, we will stop at either the end level directory or at the file name depending upon the input given. If the last level in the input happens to be a file name, we simply need to return the file name. So, we directly return the last entry in the ddd array. If the last level entry happens to be a directory, we can obtain its subdirectory list from the list of keys in its dirsdirsdirs hashmap. Similarly, we can obtain the list of files in the last directory from the keys in the corresponding filesfilesfiles hashmap. We append the two lists obtained, sort them and return the sorted appended list.
+At the end, we will stop at either the end level directory or at the file name depending upon the input given. If the last level in the input happens to be a file name, we simply need to return the file name. So, we directly return the last entry in the d array. If the last level entry happens to be a directory, we can obtain its subdirectory list from the list of keys in its dirsdirsdirs hashmap. Similarly, we can obtain the list of files in the last directory from the keys in the corresponding filesfilesfiles hashmap. We append the two lists obtained, sort them and return the sorted appended list.
 
 ```
    public List < String > ls(String path) {
