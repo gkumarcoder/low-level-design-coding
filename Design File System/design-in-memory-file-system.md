@@ -28,9 +28,7 @@ The dirs contains data in the form:
 
  ![image](https://github.com/gkumarcoder/low-level-design-coding/assets/25560217/6def7208-d7b2-4fdb-a76f-955b5d10519c)
 
- Now, we'll discuss how we implement the various commands required.
-
-```
+ ```
 public class FileSystem {
     class Dir {
         HashMap < String, Dir > dirs = new HashMap < > ();
@@ -41,7 +39,9 @@ public class FileSystem {
         root = new Dir();
     }
 ```
- 
+
+ Now, we'll discuss how we implement the various commands required.
+
 
 **1. ls:** 
 
