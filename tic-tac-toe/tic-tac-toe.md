@@ -2,6 +2,14 @@
 PROBLEM : 
 Tic Tac Toe is one of the classic games with pretty simple rules. Two players take turns placing characters on an n by n board. The first player that connects n consecutive characters horizontally, vertically, or diagonally wins the game. Traditionally (and in this problem), the board width is fixed at 3. However, to help demonstrate the efficiency of each approach, we will refer to the board width as n throughout this article.
 
+     0     1     2    
+    -----------------
+  0 |   |     |     |    
+    -----------------
+  1 |   |     |     |   
+    -----------------
+  2 |   |     |     |  
+    -----------------
 
 FIRST APPROCH INTUTION :
 
@@ -20,8 +28,15 @@ We can start by creating an n by n grid that represents the original board.
 
 STEP 2>
 **Diagonal:** : Next, let's take a closer look at the previous winning conditions. Notice that a character located at [row, col] will be on the diagonal when its column index equals its row index, that is row = col. 
-
+(0,0) (1,1) (2,2)
 **Anti-Diagonal** : Likewise, a character will be on the anti-diagonal when then the sum of its row index and column index is equal to n - 1, 
 that is row + col = n - 1.
+
+(0,2) (1,1) (2,0)
+
+0 + 2 = 2
+1 + 1 = 2
+2 + 0 = 2
+
 
 
