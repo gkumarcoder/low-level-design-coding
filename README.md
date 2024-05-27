@@ -5,8 +5,8 @@ The roadmap to implement Low Level Design, Object Oriented Design and Game Desig
 ### LLD Design
 | Topic                    | Description                                             | Link                               |
 |--------------------------|---------------------------------------------------------|------------------------------------|
-| ChessGame                |                                                         |        |
-| Tic Tac Toe Game         |                                                         | |
+| ChessGame                |                                                         | https://tinyurl.com/4k69hzkb       |
+| Tic Tac Toe Game         |                                                         | https://tinyurl.com/m644ab6w       |
 | Design File System       |                                                         | https://tinyurl.com/bdvs6tb6       | 
 
 
