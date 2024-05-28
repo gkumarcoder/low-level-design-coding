@@ -11,7 +11,7 @@ Tic Tac Toe is one of the classic games with pretty simple rules. Two players ta
   2 |   |     |     |  
     -----------------
 
-FIRST APPROCH INTUTION :
+First approach Intuition :
 
 Since we have to find if the current player has won, we need to look at what the winning conditions are. The figure below illustrates the 4 winning conditions according to the rules.
 
@@ -37,8 +37,11 @@ that is row + col = n - 1.
 (0,2) (1,1) (2,0)
 
 0 + 2 = 2
+
 1 + 1 = 2
+
 2 + 0 = 2
+
 
 
 
