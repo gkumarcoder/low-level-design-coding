@@ -42,6 +42,27 @@ that is row + col = n - 1.
 
 2 + 0 = 2
 
+ALGORITHAM
+
+1. Initialize a 2-dimensional array board of size n by n representing an empty board.
+
+2. For each new move [row, col], mark the relative position board[row][col] on board with the player's id.
+   Suppose player one's id is 1, and player two's id is -1.
+
+3. Then, check if this move meets any of the winning conditions:
+   i) **ROW :** Check if all cells in the current row are filled with characters from the current player.
+      We traverse the row from column 0 to column n - 1 while keeping the row index constant.
+   ii) **Column :** Check if all cells in the current column are filled with characters from the current player.
+      We traverse the column from row 0 to row n - 1 while keeping the column index constant.
+   iii) **Diagonal :** Check if this move is on the diagonal; that is, check if row equals col. If so, traverse the entire diagonal
+       and check if all positions on the diagonal contain characters from this player.
+   iv) **Anti-Diagonal** Check if this move is on the anti-diagonal; that is, check if row + col equals n - 1. If so,
+       traverse the entire anti-diagonal and check if all positions on the anti-diagonal contain characters from this player.
+   
+4. If there is no winner after all of the moves have been played, we will check if the entire board is filled.
+   If so, return "Draw", otherwise return "Pending", meaning the game is still on. That is, check if the length of moves equals
+   the number of cells on the n by n board.
+
 
 
 
