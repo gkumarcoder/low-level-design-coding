@@ -2,6 +2,7 @@
 PROBLEM : 
 Tic Tac Toe is one of the classic games with pretty simple rules. Two players take turns placing characters on an n by n board. The first player that connects n consecutive characters horizontally, vertically, or diagonally wins the game. Traditionally (and in this problem), the board width is fixed at 3. However, to help demonstrate the efficiency of each approach, we will refer to the board width as n throughout this article.
 
+
      0     1     2    
     -----------------
   0 |   |     |     |    
@@ -10,6 +11,7 @@ Tic Tac Toe is one of the classic games with pretty simple rules. Two players ta
     -----------------
   2 |   |     |     |  
     -----------------
+    
 
 First approach Intuition :
 
