@@ -134,5 +134,17 @@ ALGORITHAM
    ```
 
 
+**Complexity Analysis**
+
+Let n be the length of the board and m be the length of input moves.
+
+Time complexity: O(m⋅n)
+For every move, we need to traverse the same row, column, diagonal, and anti-diagonal, which takes O(n) time.
+
+Space complexity: O(n^2)
+
+We use an n by n array to record every move
+
+
 
 
