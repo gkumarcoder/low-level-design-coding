@@ -161,6 +161,7 @@ class TicTacToe {
     }
 
     public int move(int row, int col, int player) {
+        //STEP 2:Every move, mark the row and col on the board with the current player's id player.
         board[row][col] = player;
         // check if the player wins
         if ((checkRow(row, player)) || (checkColumn(col, player)) || (row == col && checkDiagonal(player)) ||  (col == n - row - 1 && checkAntiDiagonal(player))) {
