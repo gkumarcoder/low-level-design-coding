@@ -152,7 +152,7 @@ public static void displayBoard(int board[][]) {
 
 
 
-#**Logic for a 9x9 board.**
+###Logic for a 9x9 board.
 
 ```
 public class Sudoku{
