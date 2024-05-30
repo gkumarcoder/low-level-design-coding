@@ -47,6 +47,26 @@ int n = board.length;
 int row = -1;
 int col = -1;
 
+boolean isEmptyLeft = false;
+
+// Finding the empty cell if any 
+for(int i = 0; i < n; i++){
+ for(int j = 0; j <n; j++){
+  if(board[i][j]==0){
+  row = i;
+  col = j;
+  isEmptyLeft = true;
+  }
+ }
+if(isEmptyLeft == true){
+  break;
+}
+}
+
+if(isEmptyLeft == false){
+//Solved
+return true;
+}
 
 }
 
