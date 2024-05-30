@@ -1,7 +1,8 @@
 
 **First, we will design our logic for a 4x4 board.**
 
-</PRE>
+
+<PRE>
     0   1   2   3
   |---|---|---|---|
 0 |   |   |   |   |
