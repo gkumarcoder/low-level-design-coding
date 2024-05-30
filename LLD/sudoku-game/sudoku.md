@@ -3,7 +3,7 @@
 
 **Then you can refer my solution for a 9x9 board.**
 
-AS we know it 
+Aa we know it for solving sudoku we need to know below rules and same applies for bigger board as well
 
 1. Fill Each row uniqley.
    
