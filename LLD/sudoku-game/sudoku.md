@@ -35,10 +35,19 @@ And N Value is 4 here
 ```
 public class Sudoku{
 
-public void displayBoard(int board[][]){
+public static void displayBoard(int board[][]){
  for(int[] myBoard : board ){
  System.out.println(Arrays.toString(myBoard));
  }
+}
+
+public static void solveSudoku(int board[][]){
+
+int n = board.length;
+int row = -1;
+int col = -1;
+
+
 }
 
  public static void main(String[] args){
@@ -46,7 +55,7 @@ public void displayBoard(int board[][]){
          {
          {1, 0, 3, 0},
          {0, 0, 2, 1},
-         {0, 1, 3, 2},
+         {0, 1, 0, 2},
          {2, 4, 0, 0}
          };
    if(solveSudoku(board)){
