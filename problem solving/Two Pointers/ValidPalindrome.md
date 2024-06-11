@@ -7,35 +7,39 @@
 
 class ValidPalindrome {
 
-  public static String isPalindrome(String s) {
-    
-    int left = 0;                 // POINTER ONE
-    int right = s.length() - 1;   // POINTER TWO
-    int i = 1;
-
-    // The terminating condition for the loop is when both the pointers reach the same element or when they cross each other.
+  public static boolean isPalindrome(String s) {
+    int left = 0;
+    int right = s.length() - 1;
     while (left < right) {
-      left = left + 1;        // Heading towards the right
-      right = right - 1;      // Heading towards the left
-      i = i + 1;
-      System.out.println(new String(new char[100]).replace('\0', '-'));
+      if (s.charAt(left) != s.charAt(right))
+      {
+        return false;
+      }
+      left = left + 1;
+      right = right - 1;
     }
-    System.out.println("Loop terminated with left = " + left + ", right = " + right);
-    return "The pointers have either reached the same index, or have crossed each other, hence we don't need to look further.";
+    return true;
   }
-
+  
   //Driver code
   public static void main(String[] arg) {
     String[] testCase = {
-      "RACECAR",
+      "RACEACAR",
+      "A",
+      "ABCDEFGFEDCBA",
+      "ABC",
+      "ABCBA",
       "ABBA",
-      "TART"
+      "RACEACAR"
     };
     for (int k = 0; k < testCase.length; k++) {
-      System.out.println("Test Case # " + (k + 1));
-      System.out.println(isPalindrome(testCase[k]));
+      System.out.println("Test Case #" + (k + 1));
+      System.out.println(new String(new char[100]).replace('\0', '-'));
+      System.out.println("The input string is " + testCase[k] + "' and the length of the string is " + testCase[k].length() + ".");
+      System.out.println("\nIs it a palindrome?..... " + isPalindrome(testCase[k]));
       System.out.println(new String(new char[100]).replace('\0', '-'));
     }
   }
 }
+
 ```
