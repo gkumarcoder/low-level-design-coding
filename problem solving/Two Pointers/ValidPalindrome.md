@@ -4,20 +4,19 @@
 </pre>
 
 ```
+
 class ValidPalindrome {
 
   public static String isPalindrome(String s) {
-    System.out.println("String to check: " + s + ". Length of string: " + s.length());
-    int left = 0;
-    int right = s.length() - 1;
+    
+    int left = 0;                 // POINTER ONE
+    int right = s.length() - 1;   // POINTER TWO
     int i = 1;
+
     // The terminating condition for the loop is when both the pointers reach the same element or when they cross each other.
     while (left < right) {
-      System.out.println("In iteration " + i + ", left = " + left + ", right = " + right);
-      System.out.println("The current element being pointed to by the left pointer is '" + s.charAt(left) + "'");
-      System.out.println("The current element being pointed to by the right pointer is '" + s.charAt(right) + "'");
-      left = left + 1; // Heading towards the right
-      right = right - 1; // Heading towards the left
+      left = left + 1;        // Heading towards the right
+      right = right - 1;      // Heading towards the left
       i = i + 1;
       System.out.println(new String(new char[100]).replace('\0', '-'));
     }
