@@ -11,7 +11,7 @@ The roadmap to implement Low Level Design, Object Oriented Design and Game Desig
 | Chess Game               |                                                         | https://tinyurl.com/4k69hzkb       |
 | Design File System       |                                                         | https://tinyurl.com/bp5yyma5       | 
 | Design Basic Calculator  |                                                         | https://tinyurl.com/mrxt2dnp       | 
-| Design HashMap           |                                                         | https://tinyurl.com/mrxt2dnp       | 
+| Design HashMap           |                                                         | https://tinyurl.com/3zpj5h8k       | 
 
 
 
