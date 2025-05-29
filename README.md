@@ -14,6 +14,7 @@ The roadmap to implement Low Level Design, Object Oriented Design and Game Desig
 | Design HashMap           |                                                         | https://tinyurl.com/3zpj5h8k       | 
 | Design Airline System    |                                                         | https://tinyurl.com/3zpj5h8k       | 
 | Design Meeting scheduler |                                                         | https://tinyurl.com/4svy4c7s       | 
+| Designing a Digital Wallet Service |                                               | https://tinyurl.com/4svy4c7s       | 
 
 
 
