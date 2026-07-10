@@ -1,4 +1,7 @@
 
+**Result: query count goes from 1 + N → 1, and P99 flattens to roughly constant regardless of batch size.**
+
+
 1. The first step is to design a hash function using the modulo operator
    When we are selecting a modulo base, it’s advisable to choose a prime number. This is because choosing a prime number as the modulo base helps
    minimize collisions. Since prime numbers offer better distribution of hash codes, reducing the likelihood of collisions
