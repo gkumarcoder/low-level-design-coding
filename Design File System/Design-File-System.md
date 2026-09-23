@@ -35,7 +35,36 @@ fileSystem.createPath("/c/d", 1); // return false because the parent path "/c" d
 
 fileSystem.get("/c"); // return -1 because this path doesn't exist.
 
+==
+FileSystem fileSystem = new FileSystem();
 
+fileSystem.createPath("/users", 100);           // true
+fileSystem.createPath("/users/desktop", 2);     // true
+fileSystem.createPath("/users/documents", 5);   // true
+
+fileSystem.get("/users");                       // 100
+fileSystem.get("/users/desktop");               // 2
+fileSystem.get("/users/documents");             // 5
+
+fileSystem.createPath("/users/desktop/java", 10); // true
+fileSystem.get("/users/desktop/java");             // 10
+
+fileSystem.createPath("/c/d", 1);               // false, because "/c" doesn't exist
+fileSystem.get("/c");                            // -1
+
+fileSystem.createPath("/users", 200);            // false, because "/users" already exists
+
+fileSystem.createPath("/a", 1);                  // true
+fileSystem.createPath("/a/b", 2);                // true
+fileSystem.createPath("/a/b/c", 3);              // true
+
+fileSystem.get("/a");                            // 1
+fileSystem.get("/a/b");                          // 2
+fileSystem.get("/a/b/c");                        // 3
+
+fileSystem.get("/unknown");                      // -1
+fileSystem.get("/users/mobile");                 // -1
+//
 JAVA SOLUTION :
 
 ```
